@@ -22,7 +22,7 @@
         {
             "descreption": "ime delay in seconds so that it does not seep suspecious. Default = 5s",
             "value": "5",
-            "required": "False"
+            "required": false
         }
     }
 }
