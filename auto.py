@@ -14,7 +14,7 @@ import time
 from Config import Config
 XX = "A qt waifu appeared!"
 
-
+DELAY = Config.DELAY
 API_ID = Config.API_ID
 API_HASH = Config.API_HASH
 Client = TelegramClient(Config.STRING_SESSION, API_ID, API_HASH)
@@ -44,7 +44,7 @@ async def reverse(event):
     div = xx.find_all("div", {"class": "r5a77d"})[0]
     alls = div.find("a")
     text = alls.text
-    time.sleep(5)
+    time.sleep(DELAY)
     send = await Client.send_message(event.chat_id, f"/protecc {text}")
     await sleep(5)
     os.remove(dl)

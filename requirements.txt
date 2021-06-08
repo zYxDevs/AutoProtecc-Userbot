@@ -1,0 +1,4 @@
+telethon
+os
+requests
+bs4
