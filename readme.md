@@ -1,4 +1,4 @@
-# Autowaofu Brooo
+# Autowaifu Brooo
 
 ### This is a userbot for autowaifu ing waifus sent by [@loli_harem_bot](https://t.me/loli_harem_bot).
 
