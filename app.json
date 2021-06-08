@@ -1,0 +1,12 @@
+{
+    "name": "Autowaifu inator",
+    "descreption": "It will autoprotecc waifus",
+    "repository": "https://github.com/Kgf123/Autow",
+    "keywords": ["python", "telethon", "auto", "waifu", "Autowaifu"],
+    "env":
+    {
+        "API_ID":{},
+        "API_HASH":{},
+        "STRING_SESSION":{},
+    }
+}
