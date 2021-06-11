@@ -17,4 +17,4 @@ I don't know if it will work or not. Never tried myself. **__Account may get ban
 ```
 
 ## __Thank you.__
-## I have no liscence. Dont scold.
+## LICENSE IS `GNU General Public License v3.0`
