@@ -3,6 +3,7 @@
 @author: Kgf123@Github
 Licensed Under "GPU v3.0"
 Copyright (C) 2020-2021 by Kgf123@Github, < https://github.com/Kgf123 >.
+All rights reserved
 """
 
 
