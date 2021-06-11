@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jun  8 15:02:03 2021
-Licensed Under "GPU v3.0"
 @author: Kgf123@Github
+Licensed Under "GPU v3.0"
 Copyright (C) 2020-2021 by Kgf123@Github, < https://github.com/Kgf123 >.
 """
+
 
 import os
 import requests
