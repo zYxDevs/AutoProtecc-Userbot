@@ -1,17 +1,21 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun  8 15:02:03 2021
+# # -*- coding: utf-8 -*-
 
-@author: user
-"""
+# @author: Kgf123
+# Licensed Under 'GPU v3.0'
+# Copyright (C) 2021 https://github.com/Kgf123
+# This file is part of Project-Autowaifu.
+# Pproject-Autowaifu must not be copied and/or distributed without the express permission of Kgf123.
+# All rights resrved
 
-import os
+
 import requests
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
 from telethon import *
 import time
 from Config import Config
+import os
+
 XX = "A qt waifu appeared!"
 
 DELAY = Config.DELAY
@@ -48,6 +52,8 @@ async def reverse(event):
     send = await Client.send_message(event.chat_id, f"/protecc {text}")
     await sleep(5)
     os.remove(dl)
+
+
 Client.start()
 print("Started")
 Client.run_until_disconnected()

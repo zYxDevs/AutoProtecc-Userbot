@@ -2,24 +2,28 @@
     "name": "Autowaifu inator",
     "descreption": "It will autoprotecc waifus",
     "repository": "https://github.com/Kgf123/Aaaaawwwww",
-    "keywords": ["python", "telethon", "auto", "waifu", "Autowaifu"],
+    "keywords": [
+        "python",
+        "telethon",
+        "auto",
+        "waifu",
+        "Autowaifu",
+        "protecc",
+        "autoprotecc"
+    ],
     "website": "https://github.com/Kgf123/Aaaaawwwww",
-    "env":
-    {
-        "API_ID":
-        {
+    "logo": "https://telegra.ph/file/89b0b9a3e552356b3591f.jpg",
+    "env": {
+        "API_ID": {
             "descreption": "Get thid value from my.telegram.org"
         },
-        "API_HASH":
-        {
+        "API_HASH": {
             "descreption": "Get this value from my.telegram.org"
         },
-        "STRING_SESSION":
-        {
+        "STRING_SESSION": {
             "descreption": "Get this from https://replit.com/@TeamUltroid/UltroidStringSession"
         },
-        "DELAY":
-        {
+        "DELAY": {
             "descreption": "ime delay in seconds so that it does not seep suspecious. Default = 5s",
             "value": "5",
             "required": false
