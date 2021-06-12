@@ -22,3 +22,5 @@ class Config:
     # Time delay in seconds so that it does not seep suspecious. Default = 5s
 
     DELAY = int(os.environ.get("DELAY"))
+
+    

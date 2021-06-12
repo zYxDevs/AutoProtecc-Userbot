@@ -11,7 +11,7 @@
 import requests
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
-from telethon import *
+from pyrogram import *
 import time
 from Config import Config
 import os
@@ -21,18 +21,18 @@ XX = "A qt waifu appeared!"
 DELAY = Config.DELAY
 API_ID = Config.API_ID
 API_HASH = Config.API_HASH
-Client = TelegramClient(Config.STRING_SESSION, API_ID, API_HASH)
+Client = Client(session=Config.STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
 
-@Client.on(events.NewMessage(incoming=True))
-async def reverse(event):
-    if not event.media:
+@Client.on_message()
+async def reverse(client, message):
+    if not message.photo:
         return
-    if not XX in event.text:
+    if not XX in message.text:
         return
-    if not event.sender_id == 792028928:
+    if not message.from_user.id == 792028928:
         return
-    dl = await Client.download_media(event.media, "resources/")
+    dl = await Client.download_media(message, "resources/")
     file = {"encoded_image": (dl, open(dl, "rb"))}
     grs = requests.post(
         "https://www.google.com/searchbyimage/upload", files=file, allow_redirects=False
@@ -49,11 +49,10 @@ async def reverse(event):
     alls = div.find("a")
     text = alls.text
     time.sleep(DELAY)
-    send = await Client.send_message(event.chat_id, f"/protecc {text}")
+    send = await Client.send_message(message.chat.id, f"/protecc {text}")
     await sleep(5)
     os.remove(dl)
 
 
-Client.start()
-print("Started")
-Client.run_until_disconnected()
+print("Bot Started")
+Client.run()
