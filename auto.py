@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # # -*- coding: utf-8 -*-
 
 # @author: Kgf123
@@ -8,6 +9,18 @@
 # All rights resrved
 
 
+=======
+# -*- coding: utf-8 -*-
+"""
+@author: Kgf123@Github
+Licensed Under "GPU v3.0"
+Copyright (C) 2021-2022 by Kgf123@Github, < https://github.com/Kgf123 >.
+All rights reserved
+"""
+
+
+import os
+>>>>>>> b33143f43abdc9052b9d2e5af2c7f25f5ba61687
 import requests
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
