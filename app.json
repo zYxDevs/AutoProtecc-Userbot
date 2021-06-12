@@ -1,17 +1,17 @@
 {
     "name": "Autowaifu inator",
     "descreption": "It will autoprotecc waifus",
-    "repository": "https://github.com/Kgf123/Aaaaawwwww",
+    "repository": "https://github.com/Kgf123/Auto-Waifu-Telegram",
     "keywords": [
         "python",
-        "telethon",
+        "pyrogram",
         "auto",
         "waifu",
         "Autowaifu",
         "protecc",
         "autoprotecc"
     ],
-    "website": "https://github.com/Kgf123/Aaaaawwwww",
+    "website": "https://t.me/autowaifutester",
     "logo": "https://telegra.ph/file/89b0b9a3e552356b3591f.jpg",
     "env": {
         "API_ID": {
@@ -25,7 +25,7 @@
         },
         "DELAY": {
             "descreption": "ime delay in seconds so that it does not seep suspecious. Default = 5s",
-            "value": "5",
+            "value": "3",
             "required": false
         }
     }
