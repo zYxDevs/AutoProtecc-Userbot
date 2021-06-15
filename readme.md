@@ -1,5 +1,5 @@
 # Autowaifu Brooo
-# Give me a like if you like this!!
+# Give me a star if you like this!!
 
 ### This is a userbot for autowaifu ing waifus sent by [@loli_harem_bot](https://t.me/loli_harem_bot).
 
