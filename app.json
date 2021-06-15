@@ -1,7 +1,7 @@
 {
     "name": "Autowaifu inator",
     "descreption": "It will autoprotecc waifus",
-    "repository": "https://github.com/Kgf123/Auto-Waifu-Telegram",
+    "repository": "https://github.com/Kgf123/Telegram-Autowaifu",
     "keywords": [
         "python",
         "pyrogram",
