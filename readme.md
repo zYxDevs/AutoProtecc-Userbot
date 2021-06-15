@@ -1,11 +1,12 @@
 # Autowaifu Brooo
+# Give me a like if you like this!!
 
 ### This is a userbot for autowaifu ing waifus sent by [@loli_harem_bot](https://t.me/loli_harem_bot).
 
 This will totally work. If you want to test the bot yourself by deploying it and come to [@autowaifutester](https://t.me/autowaifutester) and spam like hell. 
 
 #### Deploy to heroku from below.
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kgf123/Autow)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kgf123/Telegram-Autowaifu)
 
 ```
     Required Vars:
@@ -18,3 +19,4 @@ This will totally work. If you want to test the bot yourself by deploying it and
 
 ## __Thank you.__
 ## LICENSE IS `GNU General Public License v3.0`
+
