@@ -22,11 +22,6 @@
         },
         "STRING_SESSION": {
             "descreption": "Get this from https://replit.com/@TeamUltroid/UltroidStringSession"
-        },
-        "DELAY": {
-            "descreption": "ime delay in seconds so that it does not seep suspecious. Default = 5s",
-            "value": "3",
-            "required": false
         }
     }
 }

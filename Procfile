@@ -1,1 +1,1 @@
-worker: python auto.py
+worker: python autowaifu.py

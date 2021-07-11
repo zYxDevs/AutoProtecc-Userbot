@@ -11,16 +11,8 @@
 import os
 
 
-class Config:
-    # Get these values from my.telegram.org
-    API_ID = int(os.environ.get("API_ID"))
-    API_HASH = os.environ.get("API_HASH")
-
-    # Get this from https://replit.com/@TeamUltroid/UltroidStringSession
-    STRING_SESSION = os.environ.get("STRING_SESSION")
-
-    # Time delay in seconds so that it does not seep suspecious. Default = 5s
-
-    DELAY = int(os.environ.get("DELAY"))
-
-  
+# Get these values from my.telegram.org
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
+# Get this from https://replit.com/@TeamUltroid/UltroidStringSession
+STRING_SESSION = os.environ.get("STRING_SESSION")
