@@ -15,8 +15,8 @@
         "protecc",
         "autoprotecc"
     ],
-    "website": "https://t.me/autowaifutester",
-    "logo": "https://telegra.ph/file/89b0b9a3e552356b3591f.jpg",
+    "website": "https://t.me/AutoProtecc",
+    "logo": "https://telegra.ph/file/ad370fb4d879fd29a9489.jpg",
     "env": {
         "APP_ID": {
             "descreption": "Get thid value from my.telegram.org"
