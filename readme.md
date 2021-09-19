@@ -11,7 +11,7 @@ _More bots will added in future..._
 
 <br>
 
-**This will totally work. If you want to test the bot yourself by deploying it and come to [@autowaifutester](https://t.me/autowaifutester) and spam like hell.** 
+**This will totally work. If you want to test the bot yourself by deploying it and come to [Official AutoProtecc Group](https://t.me/AutoProtecc) and spam like hell.** 
 
 #### Deploy to heroku.
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zYxDevs/AutoProtecc-Userbot)
