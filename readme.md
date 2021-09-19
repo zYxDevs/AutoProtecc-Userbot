@@ -7,7 +7,7 @@
 • [Fate/Waifugram](https://t.me/FateWaifugram_Bot)<br>
 • [☆ Collect your husbandos ☆](https://t.me/Collect_your_husbando_bot)
 
-_More bots will be added in future..._
+_More bots and features will be added soon..._
 
 <br>
 
@@ -24,9 +24,7 @@ _More bots will be added in future..._
    Required Vars:
        API_ID - Get these values from my.telegram.org
        API_HASH - Get these values from my.telegram.org
-       STRING_SESSION - Get this from Repl
-   Optional Vars:
-       DELAY - Time delay in seconds so that it does not seep suspecious. Default = 3s. Type 0 if you dont want any delay at all.
+       STRING_SESSION - Get this from Replit
 ```
 
 
