@@ -1,1 +1,1 @@
-worker: python autoprotecc.py
+worker: python3 -m AutoProteccUserbot
