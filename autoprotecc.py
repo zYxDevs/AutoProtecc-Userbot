@@ -9,10 +9,11 @@
 
 import os
 import requests
+import time
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
 from pyrogram import Client
-from Config import API_ID, API_HASH, STRING_SESSION
+from Config import API_ID, API_HASH, STRING_SESSION, DELAY
 
 Yoga = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
@@ -39,6 +40,7 @@ async def reverse(client, message):
         div = xx.find_all("div", {"class": "r5a77d"})[0]
         alls = div.find("a")
         text = alls.text
+        time.sleep(DELAY)
         e = await Yoga.send_message(message.chat.id, f"/protecc {text}")
         await sleep(5)
         e.delete()
