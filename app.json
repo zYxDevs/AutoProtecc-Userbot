@@ -25,7 +25,12 @@
             "descreption": "Get this value from my.telegram.org"
         },
         "STRING_SESSION": {
-            "descreption": "Get this from https://replit.com/@TeamUltroid/UltroidStringSession"
+            "descreption": "Get this from https://replit.com/@YogaPranata1/PyroStringGen"
+        },
+        "DELAY": {
+            "descreption": "time delay in seconds so that it does not seep suspecious. Default = 5s",
+            "value": "5",
+            "required": false
         }
     }
 }
