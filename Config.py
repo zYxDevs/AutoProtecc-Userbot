@@ -20,3 +20,6 @@ STRING_SESSION = os.environ.get("STRING_SESSION")
 
 # Time delay in seconds so that it does not seep suspecious. Default = 5s
 DELAY = int(os.environ.get("DELAY", "5"))
+
+# Waifu, Servant, Husbando bot id.
+BOT_LIST = int(os.environ.get("BOT_LIST"))
