@@ -15,14 +15,14 @@ from bs4 import BeautifulSoup as bs
 from pyrogram import Client
 from Config import API_ID, API_HASH, STRING_SESSION, DELAY, BOT_LIST
 
-Yoga = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
+Client = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
-@Yoga.on_message()
+@Client.on_message()
 async def reverse(client, message):
     if not message.photo:
         return
     if message.user.id in BOT_LIST:
-        dl = await Yoga.download_media(message, "resources/")
+        dl = await Client.download_media(message, "resources/")
         file = {"encoded_image": (dl, open(dl, "rb"))}
         grs = requests.post(
             "https://www.google.com/searchbyimage/upload", files=file, allow_redirects=False
@@ -39,10 +39,10 @@ async def reverse(client, message):
         alls = div.find("a")
         text = alls.text
         time.sleep(DELAY)
-        e = await Yoga.send_message(message.chat.id, f"/protecc {text}")
+        e = await Client.send_message(message.chat.id, f"/protecc {text}")
         await sleep(5)
         e.delete()
         os.remove(dl)
 
 print("[AutoProtecc] From Now and Forever All Harem is Yours. (c) @AutoProtecc")
-Yoga.run()
+Client.run()
