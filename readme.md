@@ -2,6 +2,9 @@
 ##### Give me a star if you like this!!
 
 
+[![Asuna Yuuki](https://socialify.git.ci/zYxDevs/AutoProtecc-Userbot/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&logo=https%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2021%2F04%2FTelegram-logo.png&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Light)](https://t.me/AutoProtecc)
+
+
 #### This is a userbot for autoprotecc waifu, servant and husbando sent by:
 • [Waifu Harem Bot](https://t.me/loli_harem_bot)<br>
 • [Fate/Waifugram](https://t.me/FateWaifugram_Bot)<br>
