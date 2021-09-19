@@ -13,7 +13,7 @@ import os
 BOT_LIST = "792028928 1232515770 1964681186"
 
 # Get these values from my.telegram.org
-API_ID = int(os.environ.get("APP_ID"))
+API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
 
 # Get this from https://replit.com/@YogaPranata1/PyroStringGen
