@@ -31,6 +31,10 @@ _More bots and features will be added soon..._
 ```
 
 
+## Credits
+• Owner & Editor: [zYxDevs](https://github.com/zYxDevs)
+
+
 ## 👋 Thanks you.
 ### LICENSE IS `GNU General Public License v3.0`
 
