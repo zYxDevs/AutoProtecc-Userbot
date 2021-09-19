@@ -18,7 +18,7 @@
     "website": "https://t.me/AutoProtecc",
     "logo": "https://telegra.ph/file/ad370fb4d879fd29a9489.jpg",
     "env": {
-        "APP_ID": {
+        "API_ID": {
             "descreption": "Get thid value from my.telegram.org"
         },
         "API_HASH": {
