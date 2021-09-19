@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup as bs
 from pyrogram import Client
 from Config import API_ID, API_HASH, STRING_SESSION, DELAY, BOT_LIST
 
-Yoga = Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH, sleep_threshold=180)
+Yoga = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
 @Yoga.on_message()
 async def reverse(client, message):
