@@ -14,5 +14,9 @@ import os
 # Get these values from my.telegram.org
 API_ID = int(os.environ.get("APP_ID"))
 API_HASH = os.environ.get("API_HASH")
+
 # Get this from https://replit.com/@YogaPranata1/PyroStringGen
 STRING_SESSION = os.environ.get("STRING_SESSION")
+
+# Time delay in seconds so that it does not seep suspecious. Default = 5s
+DELAY = int(os.environ.get("DELAY", "5"))
