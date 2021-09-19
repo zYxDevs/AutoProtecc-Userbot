@@ -1,4 +1,3 @@
 pyrogram
 requests
 bs4
-asyncio
