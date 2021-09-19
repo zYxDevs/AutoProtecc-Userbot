@@ -12,7 +12,7 @@ import requests
 import time
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
-from pyrogram import Client
+from pyrogram import *
 from Config import Config
 
 DELAY = Config.DELAY
