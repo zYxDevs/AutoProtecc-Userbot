@@ -23,7 +23,7 @@ async def reverse(client, message):
     if not message.photo:
         return
     if message.user.id in BOT_LIST:
-        dl = await Clit.download_media(message, "resources/")
+        dl = await Yoga.download_media(message, "resources/")
         file = {"encoded_image": (dl, open(dl, "rb"))}
         grs = requests.post(
             "https://www.google.com/searchbyimage/upload", files=file, allow_redirects=False
@@ -39,7 +39,7 @@ async def reverse(client, message):
         div = xx.find_all("div", {"class": "r5a77d"})[0]
         alls = div.find("a")
         text = alls.text
-        e = await Clit.send_message(message.chat.id, f"/protecc {text}")
+        e = await Yoga.send_message(message.chat.id, f"/protecc {text}")
         await sleep(5)
         e.delete()
         os.remove(dl)
