@@ -23,3 +23,5 @@ DELAY = int(os.environ.get("DELAY", "5"))
 
 # Waifu, Servant, Husbando bot id.
 BOT_LIST = int(os.environ.get("BOT_LIST"))
+
+792028928", "1232515770", "1964681186
