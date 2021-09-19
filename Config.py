@@ -10,6 +10,7 @@
 
 import os
 
+BOT_LIST = 792028928 1232515770 1964681186
 
 # Get these values from my.telegram.org
 API_ID = int(os.environ.get("APP_ID"))
@@ -22,6 +23,4 @@ STRING_SESSION = os.environ.get("STRING_SESSION")
 DELAY = int(os.environ.get("DELAY", "5"))
 
 # Waifu, Servant, Husbando bot id.
-BOT_LIST = int(os.environ.get("BOT_LIST"))
-
-792028928", "1232515770", "1964681186
+BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST", "").split()}
