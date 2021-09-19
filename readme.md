@@ -7,7 +7,7 @@
 • [Fate/Waifugram](https://t.me/FateWaifugram_Bot)<br>
 • [☆ Collect your husbandos ☆](https://t.me/Collect_your_husbando_bot)
 
-_More bots will added in future..._
+_More bots will be added in future..._
 
 <br>
 
