@@ -13,14 +13,18 @@ import time
 from asyncio import sleep
 from bs4 import BeautifulSoup as bs
 from pyrogram import Client
-from Config import API_ID, API_HASH, STRING_SESSION, DELAY, BOT_LIST
+from Config import Config
 
-Client = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
+DELAY = Config.DELAY
+API_ID = Config.API_ID
+API_HASH = Config.API_HASH
+Client = Client(session_name=Config.STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
 @Client.on_message()
 async def reverse(client, message):
     if not message.photo:
         return
+
     if message.user.id in BOT_LIST:
         dl = await Client.download_media(message, "resources/")
         file = {"encoded_image": (dl, open(dl, "rb"))}
