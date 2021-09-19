@@ -18,7 +18,7 @@
     "website": "https://t.me/autowaifutester",
     "logo": "https://telegra.ph/file/89b0b9a3e552356b3591f.jpg",
     "env": {
-        "API_ID": {
+        "APP_ID": {
             "descreption": "Get thid value from my.telegram.org"
         },
         "API_HASH": {
