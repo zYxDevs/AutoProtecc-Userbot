@@ -28,6 +28,8 @@ _More bots and features will be added soon..._
        API_ID - Get these values from my.telegram.org
        API_HASH - Get these values from my.telegram.org
        STRING_SESSION - Get this from Replit
+   Optional Vars:
+       DELAY - Time delay in seconds so that it does not seep suspecious. Default = 5s. Type 0 if you dont want any delay at all.
 ```
 
 
