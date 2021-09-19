@@ -1,11 +1,11 @@
 # # -*- coding: utf-8 -*-
 
-# @author: Kgf123
+# @author: zYxDevs
 # Licensed Under 'GPU v3.0'
-# Copyright (C) 2021 https://github.com/Kgf123
-# This file is part of Project-Autowaifu.
-# Pproject-Autowaifu must not be copied and/or distributed without the express permission of Kgf123.
-# All rights resrved
+# Copyright (C) 2021 https://github.com/zYxDevs
+# This file is part of Project-AutoProtecc.
+# Pproject-AutoProtecc must not be copied and/or distributed without the express permission of zYxDevs.
+# All rights reserved
 
 import os
 import requests
@@ -14,14 +14,15 @@ from bs4 import BeautifulSoup as bs
 from pyrogram import Client
 from Config import API_ID, API_HASH, STRING_SESSION
 
-Clit = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
+Yoga = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
+BOT_LIST = int("792028928", "1232515770", "1964681186")
 
-@Clit.on_message()
+@Yoga.on_message()
 async def reverse(client, message):
     if not message.photo:
         return
-    if message.from_user.id == 792028928:
+    if message.user.id in BOT_LIST:
         dl = await Clit.download_media(message, "resources/")
         file = {"encoded_image": (dl, open(dl, "rb"))}
         grs = requests.post(
@@ -43,5 +44,5 @@ async def reverse(client, message):
         e.delete()
         os.remove(dl)
 
-print("Bot started bruthur")
-Clit.run()
+print("[AutoProtecc] From Now and Forever All Harem is Yours.")
+Yoga.run()
