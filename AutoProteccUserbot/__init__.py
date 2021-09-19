@@ -7,4 +7,4 @@ API_HASH = os.environ.get("API_HASH", None)
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 DELAY = os.environ.get("DELAY", None)
 
-Waifu = Client(SESSION, api_id=API_ID, api_hash=API_HASH)
+Waifu = Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
