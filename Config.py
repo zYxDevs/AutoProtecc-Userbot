@@ -10,7 +10,7 @@
 
 import os
 
-BOT_LIST = 792028928 1232515770 1964681186
+BOT_LIST = "792028928 1232515770 1964681186"
 
 # Get these values from my.telegram.org
 API_ID = int(os.environ.get("APP_ID"))
