@@ -28,7 +28,7 @@
             "descreption": "Get this from https://replit.com/@YogaPranata1/PyroStringGen"
         },
         "BOT_LIST":{
-            "description": "List id of bot for trigger autoprotecc, separate by space."
+            "description": "List id of bot for trigger autoprotecc, separate by space.",
             "value": "792028928 1232515770 1964681186"
         },
         "DELAY": {
