@@ -44,5 +44,5 @@ async def reverse(client, message):
         e.delete()
         os.remove(dl)
 
-print("[AutoProtecc] From Now and Forever All Harem is Yours.")
+print("[AutoProtecc] From Now and Forever All Harem is Yours. (c) @AutoProtecc")
 Yoga.run()
