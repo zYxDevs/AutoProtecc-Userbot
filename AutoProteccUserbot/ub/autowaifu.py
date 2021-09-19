@@ -3,16 +3,14 @@ from pyrogram import filters
 import os
 from bs4 import BeautifulSoup
 import requests
-from AutoProteccUserbot import Waifu, DELAY
-
-# REPLY VAR
+from AutoProteccUserbot import Waifu, DELAY, BOT_LISTA
 
 @Waifu.on_message()
 async def autowaifu(client, message):
     if message.photo:
 
-        if message.from_user.id == 792028928:
-            dl = await Client.download_media(message, "resources/")
+        if message.user.id in BOT_LIST:
+            dl = await Waifu.download_media(message, "resources/")
             file = {"encoded_image": (dl, open(dl, "rb"))}
             grs = requests.post(
                 "https://www.google.com/searchbyimage/upload",
