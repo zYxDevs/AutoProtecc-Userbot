@@ -1,13 +1,17 @@
 {
-    "name": "Autowaifu inator",
-    "descreption": "It will autoprotecc waifus",
-    "repository": "https://github.com/Kgf123/Telegram-Autowaifu",
+    "name": "AutoProtecc Userbot",
+    "descreption": "It will autoprotecc waifus, servants or husbandos.",
+    "repository": "https://github.com/zYxDevs/AutoProtecc-Userbot",
     "keywords": [
         "python",
         "pyrogram",
         "auto",
         "waifu",
         "Autowaifu",
+        "servant",
+        "Autoservant",
+        "husbando",
+        "Autohusbando",
         "protecc",
         "autoprotecc"
     ],
