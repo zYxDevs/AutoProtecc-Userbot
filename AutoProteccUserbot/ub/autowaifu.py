@@ -1,7 +1,7 @@
 import time
 from pyrogram import filters
 import os
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 import requests
 from AutoProteccUserbot import Waifu, DELAY, BOT_LIST
 
