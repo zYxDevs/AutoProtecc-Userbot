@@ -1,6 +1,6 @@
 import os
 import time
-from pyrogram.session import *
+from pyrogram.session import Session
 from pyrogram import Client, errors
 
 API_ID = os.environ.get("API_ID", None)
