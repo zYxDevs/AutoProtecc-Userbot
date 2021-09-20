@@ -8,4 +8,4 @@ STRING_SESSION = os.environ.get("STRING_SESSION", None)
 DELAY = os.environ.get("DELAY", None)
 BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST", "").split()}
 
-Waifu = Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
+Waifu = Client(session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
