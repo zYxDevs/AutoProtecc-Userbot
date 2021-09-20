@@ -1,7 +1,7 @@
 import os
 import time
 from pyrogram.session import Session
-from pyrogram import Client, errors
+from pyrogram import * #Client, errors
 
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
