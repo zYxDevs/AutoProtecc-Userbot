@@ -12,4 +12,4 @@ BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST", "").split()}
 if STRING_SESSION:
     Waifu = Client(Session(STRING_SESSION), api_id=API_ID, api_hash=API_HASH)
 else:
-    Waifu = Client("userbot", api_id=API_ID, api_hash=API_HASH)
+    Waifu = Client("userbot", api_id=API_ID, api_hash=API_HASH, dc_id=5, test_mode=bool)
