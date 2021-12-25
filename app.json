@@ -33,8 +33,7 @@
         },
         "DELAY": {
             "descreption": "time delay in seconds so that it does not seep suspecious. Default = 5s",
-            "value": "5",
-            "required": false
+            "value": "5"
         }
     }
 }
