@@ -1,1 +1,1 @@
-worker: python3 -m AutoProteccUserbot
+worker: python3 AutoWaifu.py
