@@ -36,7 +36,12 @@ _More bots and features will be added soon..._
 
 
 ## Credits
-• **Owner & Editor:** [zYxDevs](https://t.me/Yoga_CIC)
+• **Owner:**<br>
+[zYxDevs](https://t.me/Yoga_CIC)
+<br>
+
+• **Contributors:**<br>
+[TheSungJinWoo](https://github.com/TheSungJinWoo)
 
 
 ## 👋 Thanks you
