@@ -29,9 +29,9 @@ BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
 
 
 Waifu = Client(
-              STRING_SESSION,
-              api_id=API_ID,
-              api_hash=API_HASH,
+     STRING_SESSION,
+     api_id=API_ID,
+     api_hash=API_HASH,
 )
 
 
