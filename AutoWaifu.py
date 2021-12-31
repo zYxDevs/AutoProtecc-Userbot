@@ -29,9 +29,9 @@ BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
 
 
 Waifu = Client(
-     STRING_SESSION,
-     api_id=API_ID,
-     api_hash=API_HASH,
+    STRING_SESSION,
+    api_id=API_ID,
+    api_hash=API_HASH,
 )
 
 
@@ -41,8 +41,8 @@ headers_ = [("User-agent", u_)]
 
 async def ParseSauce(googleurl):
     async with aiohttp.ClientSession(headers=headers_) as session:
-      async with session.get(googleurl) as resp:
-          source = await resp.read()
+        async with session.get(googleurl) as resp:
+            source = await resp.read()
     soup = BeautifulSoup(source, "html.parser")
     results = {"similar_images": "", "best_guess": ""}
     try:
@@ -69,7 +69,9 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@Waifu.add_handler(MessageHandler(filters.group & ~filters.edited & ~filters.forward), group=0)
+@Waifu.add_handler(
+    MessageHandler(filters.group & ~filters.edited & ~filters.forward), group=0
+)
 async def autowaifu(client, message):
     if message.photo and message.from_user.id in BOT_LIST:
         img = await message.download()
