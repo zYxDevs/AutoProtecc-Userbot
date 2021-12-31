@@ -28,10 +28,10 @@ DELAY = int(os.environ.get("DELAY"))
 BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
 
 
-Waifu = Client(":memory:",
-              bot_token=bot_token,
-              api_id=api_id,
-              api_hash=api_hash,
+Waifu = Client(
+              STRING_SESSION,
+              api_id=API_ID,
+              api_hash=API_HASH,
 )
 
 
