@@ -7,6 +7,10 @@
 [![Updates](https://img.shields.io/badge/Updates-Channel-blue?&logo=telegram)](https://t.me/SpreadNetworks)
 [![Support](https://img.shields.io/badge/Support-Group-blue?&logo=telegram)](https://t.me/YBotsSupport)
 
+```
+Unmaintened (For Now)!
+```
+
 **This is a userbot for autoprotecc waifu, servant and husbando sent by:**<br>
 • [Waifu Harem Bot](https://t.me/loli_harem_bot)<br>
 • [Fate/Waifugram](https://t.me/FateWaifugram_Bot)<br>
