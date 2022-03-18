@@ -26,7 +26,7 @@ _More bots and features will be added soon..._
 
 ## Get string session:
 [![Run on Repl](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@zYxDevs/StringSession)
-[![Run on Bot](https://img.shields.io/badge/StringSession-Robot-blue?&logo=telegram)](https://t.me/YogaWaifuBot)
+[![Run on Bot](https://img.shields.io/badge/StringSession-Robot-blue?&logo=telegram)](https://t.me/GetStringRobot)
 
 ## Variable:
 ```
