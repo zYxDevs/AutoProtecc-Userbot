@@ -103,4 +103,5 @@ async def autoprotecc(_, message: Message):
             await time.sleep(DELAY)
             await kek.delete()
 
+
 waifu.start()
