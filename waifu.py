@@ -37,7 +37,7 @@ except Exception as e:
 
 
 waifu = Client(
-    ":memory:",
+    name="autoprotecc_zyxdevs",
     api_id=APP_ID,
     api_hash=API_HASH,
     session_string=STRING_SESSION,
