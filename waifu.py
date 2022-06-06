@@ -107,15 +107,6 @@ async def autowaifu(_, message: Message):
 async def main():
 
     await waifu.start()
-    print(
-        """
--------------------
-| System Started! |
--------------------
-| By Yoga Pranata |
--------------------
-"""
-    )
     await idle()
 
 
