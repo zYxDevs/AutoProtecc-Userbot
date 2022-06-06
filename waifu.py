@@ -11,18 +11,19 @@ from pyrogram import (
     idle,
 )
 from pyrogram.handlers import MessageHandler
+from config import config
 
 
-API_ID = int(os.environ.get("API_ID"))
-API_HASH = str(os.environ.get("API_HASH"))
-STRING_SESSION = str(os.environ.get("STRING_SESSION"))
-DELAY = int(os.environ.get("DELAY"))
-BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
+APP_ID = int(os.environ.get("APP_ID")) or int(config.APP_ID)
+API_HASH = str(os.environ.get("API_HASH")) or str(config.API_HASH)
+STRING_SESSION = str(os.environ.get("STRING_SESSION")) or str(config.STRING_SESSION)
+DELAY = int(os.environ.get("DELAY")) or int(config.DELAY)
+BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()} or {int(config.BOT_LIST).split()}
 
 
 waifu = Client(
     name="autowaifu_zyxdevs",
-    api_id=API_ID,
+    api_id=APP_ID,
     api_hash=API_HASH,
     session_string=STRING_SESSION,
 )
