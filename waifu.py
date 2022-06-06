@@ -12,7 +12,6 @@ from pyrogram import (
     idle,
 )
 from pyrogram.handlers import MessageHandler
-from pyrogram.types import Message
 
 
 HEROKU = bool(os.environ.get("HEROKU", False))
@@ -88,7 +87,7 @@ def get_data(img):
         filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
     )
 )
-async def autoprotecc(_, message: Message):
+def autoprotecc(_, message):
     if message.photo:
         if "add" in message.caption.lower():
             img = await message.download()
