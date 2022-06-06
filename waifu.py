@@ -72,7 +72,7 @@ async def ParseSauce(googleurl):
     return results
 
 
-def get_data(img):
+async def get_data(img):
     searchUrl = "https://www.google.com/searchbyimage/upload"
     file_img = {"encoded_image": (img, open(img, "rb")), "image_content": ""}
     response = requests.post(searchUrl, files=file_img, allow_redirects=False)
@@ -105,7 +105,6 @@ async def autowaifu(_, message: Message):
 
 
 async def main():
-
     await waifu.start()
     await idle()
 
