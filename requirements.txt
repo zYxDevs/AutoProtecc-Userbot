@@ -1,4 +1,4 @@
-pyrogram==1.*
+pyrogram
 requests
 bs4
 TgCrypto
