@@ -103,11 +103,4 @@ async def autoprotecc(_, message: Message):
             await time.sleep(DELAY)
             await kek.delete()
 
-
-async def main():
-    await waifu.start()
-    await idle()
-
-
-if __name__ == "__main__":
-    waifu.loop.run_until_complete(main())
+waifu.start()
