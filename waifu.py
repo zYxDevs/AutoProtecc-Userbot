@@ -49,7 +49,7 @@ useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) 
 opener.addheaders = [("User-agent", useragent)]
 
 
-async def ParseSauce(googleurl):
+def ParseSauce(googleurl):
     """Parse/Scrape the HTML code for the info we want."""
 
     source = opener.open(googleurl).read()
@@ -72,7 +72,7 @@ async def ParseSauce(googleurl):
     return results
 
 
-async def get_data(img):
+def get_data(img):
     searchUrl = "https://www.google.com/searchbyimage/upload"
     file_img = {"encoded_image": (img, open(img, "rb")), "image_content": ""}
     response = requests.post(searchUrl, files=file_img, allow_redirects=False)
@@ -100,7 +100,6 @@ async def autoprotecc(_, message: Message):
             guess = guess.replace("Results for", "")
             await time.sleep(DELAY)
             kek = await message.reply_text(f"/protecc {guess}")
-            await time.sleep(DELAY)
             await kek.delete()
 
 
