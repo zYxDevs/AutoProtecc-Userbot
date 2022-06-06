@@ -67,7 +67,11 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@waifu.add_handler(MessageHandler(filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forward))
+@waifu.add_handler(
+    MessageHandler(
+        filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forward
+    )
+)
 async def autowaifu(client, message):
     if message.photo:
         if "add" in message.caption.lower():
