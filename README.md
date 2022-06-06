@@ -5,10 +5,10 @@
 [![Asuna Yuuki](https://socialify.git.ci/zYxDevs/AutoProtecc-Userbot/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&logo=https%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2021%2F04%2FTelegram-logo.png&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Light)](https://t.me/AutoProtecc)
 
 [![Updates](https://img.shields.io/badge/Updates-Channel-blue?&logo=telegram)](https://t.me/SpreadNetworks)
-[![Support](https://img.shields.io/badge/Support-Group-blue?&logo=telegram)](https://t.me/YBotsSupport)
+[![Support](https://img.shields.io/badge/Support-Group-blue?&logo=telegram)](https://t.me/proteccuserbot)
 
 ```
-Unmaintened (For Now)!
+Will Maintened Again (ASAP)!
 ```
 
 **This is a userbot for autoprotecc waifu, servant and husbando sent by:**<br>
