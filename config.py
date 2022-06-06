@@ -1,5 +1,5 @@
 class config:
-    APP_ID = 0 # Get it from my.telegram.org
+    APP_ID = 0  # Get it from my.telegram.org
     API_HASH = ""  # Get it from my.telegram.org
     STRING_SESSION = ""  # Get it from t.me/GetStringRobot (Choose Pyrogram)
     DELAY = 5  # Waif for x before send message
