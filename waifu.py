@@ -40,7 +40,7 @@ waifu = Client(
    "autoprotecc_zyxdevs",
     api_id=APP_ID,
     api_hash=API_HASH,
-    session_name=STRING_SESSION,
+    string_session=STRING_SESSION,
 )
 
 
