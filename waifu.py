@@ -22,7 +22,7 @@ try:
         API_HASH = str(os.environ.get("API_HASH"))
         STRING_SESSION = str(os.environ.get("STRING_SESSION"))
         DELAY = int(os.environ.get("DELAY"))
-        BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
+        BOT_LIST = int(x) for x in os.environ.get("BOT_LIST").split()
     else:
         from config import config
 
@@ -102,5 +102,6 @@ async def autoprotecc(_, message: Message):
             kek = await message.reply_text(f"/protecc {guess}")
             await time.sleep(DELAY)
             await kek.delete()
+
 
 waifu.start()
