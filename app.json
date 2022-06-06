@@ -1,6 +1,6 @@
 {
     "name": "AutoProtecc Userbot",
-    "descreption": "It will autoprotecc waifus, servants or husbandos.",
+    "description": "It will autoprotecc waifus, servants or husbandos.",
     "repository": "https://github.com/zYxDevs/AutoProtecc-Userbot",
     "keywords": [
         "python",
@@ -19,20 +19,20 @@
     "logo": "https://telegra.ph/file/ad370fb4d879fd29a9489.jpg",
     "env": {
         "API_ID": {
-            "descreption": "Get thid value from my.telegram.org"
+            "description": "Get thid value from my.telegram.org"
         },
         "API_HASH": {
-            "descreption": "Get this value from my.telegram.org"
+            "description": "Get this value from my.telegram.org"
         },
         "STRING_SESSION": {
-            "descreption": "Get this from https://replit.com/@YogaPranata1/PyroStringGen"
+            "description": "Get this from https://replit.com/@YogaPranata1/PyroStringGen"
         },
         "BOT_LIST":{
             "description": "List id of bot for trigger autoprotecc, separate by space.",
             "value": "792028928 1232515770 1964681186"
         },
         "DELAY": {
-            "descreption": "time delay in seconds so that it does not seep suspecious. Default = 5s",
+            "description": "time delay in seconds so that it does not seep suspecious. Default = 5s",
             "value": "5"
         }
     }
