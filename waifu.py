@@ -1,24 +1,16 @@
 import time
-import io
 import os
 import urllib
 import requests
-import aiohttp
 
-from re import findall
 from bs4 import BeautifulSoup
-from aiohttp import ClientSession
-from asyncio import (
-    gather,
-    get_event_loop,
-    sleep,
-)
+from asyncio import get_event_loop
 from pyrogram import (
     Client,
-    errors,
     filters,
     idle,
 )
+from pyrogram.handlers import MessageHandler
 
 
 API_ID = int(os.environ.get("API_ID"))
@@ -28,23 +20,27 @@ DELAY = int(os.environ.get("DELAY"))
 BOT_LIST = {int(x) for x in os.environ.get("BOT_LIST").split()}
 
 
-Waifu = Client(
-    STRING_SESSION,
+waifu = Client(
+    name="autowaifu_zyxdevs"
     api_id=API_ID,
     api_hash=API_HASH,
+    session_string=STRING_SESSION,
 )
 
 
-u_ = """Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"""
-headers_ = [("User-agent", u_)]
+opener = urllib.request.build_opener()
+useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"
+opener.addheaders = [("User-agent", useragent)]
 
 
 async def ParseSauce(googleurl):
-    async with aiohttp.ClientSession(headers=headers_) as session:
-        async with session.get(googleurl) as resp:
-            source = await resp.read()
+    """Parse/Scrape the HTML code for the info we want."""
+
+    source = opener.open(googleurl).read()
     soup = BeautifulSoup(source, "html.parser")
+
     results = {"similar_images": "", "best_guess": ""}
+
     try:
         for similar_image in soup.findAll("input", {"class": "gLFyf"}):
             url = "https://www.google.com/search?tbm=isch&q=" + urllib.parse.quote_plus(
@@ -53,8 +49,10 @@ async def ParseSauce(googleurl):
             results["similar_images"] = url
     except BaseException:
         pass
+
     for best_guess in soup.findAll("div", attrs={"class": "r5a77d"}):
         results["best_guess"] = best_guess.get_text()
+
     return results
 
 
@@ -69,25 +67,26 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@Waifu.add_handler(
-    MessageHandler(filters.group & ~filters.edited & ~filters.forward), group=0
-)
+@waifu.add_handler(MessageHandler(filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forward))
 async def autowaifu(client, message):
-    if message.photo and message.from_user.id in BOT_LIST:
-        img = await message.download()
-        fetchUrl = await get_data(img)
-        match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
-        guess = match["best_guess"]
-        await sleep(DELAY)
-        kek = await message.reply_text(f"/protecc {guess}")
-        await sleep(DELAY)
-        await kek.delete()
+    if message.photo:
+        if "add" in message.caption.lower():
+            img = await message.download()
+            fetchUrl = await get_data(img)
+            match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
+            guess = match["best_guess"]
+            if not guess:
+                return await message.reply_text("Failed to protecc this waifu.")
+            guess = guess.replace("Results for", "")
+            await time.sleep(DELAY)
+            kek = await message.reply_text(f"/protecc {guess}")
+            await time.sleep(DELAY)
+            await kek.delete()
 
 
 async def main():
-    session = ClientSession()
 
-    await Waifu.start()
+    await waifu.start()
     print(
         """
 -------------------
