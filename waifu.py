@@ -87,7 +87,7 @@ def get_data(img):
         filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
     )
 )
-def autoprotecc(_, message):
+async def autoprotecc(_, message):
     if message.photo:
         if "add" in message.caption.lower():
             img = await message.download()
