@@ -118,5 +118,5 @@ async def main():
     await idle()
 
 
-loop = get_event_loop()
-loop.run_until_complete(main())
+if __name__ == "__main__":
+    waifu.loop.run_until_complete(main())
