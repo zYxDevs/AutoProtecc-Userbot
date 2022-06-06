@@ -12,6 +12,7 @@ from pyrogram import (
     idle,
 )
 from pyrogram.handlers import MessageHandler
+from pyrogram.types import Message
 
 
 HEROKU = bool(os.environ.get("HEROKU", False))
@@ -87,7 +88,7 @@ def get_data(img):
         filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
     )
 )
-async def autowaifu(client, message):
+async def autowaifu(_, message: Message):
     if message.photo:
         if "add" in message.caption.lower():
             img = await message.download()
