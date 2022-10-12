@@ -84,7 +84,7 @@ def get_data(img):
 
 @waifu.add_handler(
     MessageHandler(
-        filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
+        filters.user(BOT_LIST), filters.group & ~filters.forwarded
     )
 )
 async def autoprotecc(_, message):
