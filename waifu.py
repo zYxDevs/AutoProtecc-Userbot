@@ -21,7 +21,7 @@ try:
         API_HASH = str(os.environ.get("API_HASH"))
         STRING_SESSION = str(os.environ.get("STRING_SESSION"))
         DELAY = int(os.environ.get("DELAY"))
-        BOT_LIST = int(x for x in os.environ.get("BOT_LIST").split())
+        BOT_LIST = int(iter(os.environ.get("BOT_LIST").split()))
     else:
         from config import config
 
@@ -84,22 +84,23 @@ def get_data(img):
 
 @waifu.add_handler(
     MessageHandler(
-        filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
+        filters.user(BOT_LIST), filters.group & ~filters.forwarded
     )
 )
 async def autoprotecc(_, message):
-    if message.photo:
-        if "add" in message.caption.lower():
-            img = await message.download()
-            fetchUrl = await get_data(img)
-            match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
-            guess = match["best_guess"]
-            if not guess:
-                return await message.reply_text("Failed to protecc this waifu.")
-            guess = guess.replace("Results for", "")
-            await time.sleep(DELAY)
-            kek = await message.reply_text(f"/protecc {guess}")
-            await kek.delete()
+    if not message.photo:
+        return
+    if "add" in message.caption.lower():
+        img = await message.download()
+        fetchUrl = await get_data(img)
+        match = await ParseSauce(f"{fetchUrl}&preferences?hl=en&fg=1#languages")
+        guess = match["best_guess"]
+        if not guess:
+            return await message.reply_text("Failed to protecc this waifu.")
+        guess = guess.replace("Results for", "")
+        await time.sleep(DELAY)
+        kek = await message.reply_text(f"/protecc {guess}")
+        await kek.delete()
 
 
 waifu.start()
