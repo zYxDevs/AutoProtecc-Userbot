@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import API_HASH, APP_ID, CHATS, BOT_LIST, STRING_SESSION, DELAY
+from config import API_HASH, APP_ID, CHATS, STRING_SESSION, DELAY
 
 waifu = Client(
     name="userbot",
@@ -53,7 +53,7 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@waifu.on_message(filters.photo & filters.chat(CHATS) & filters.user(users=BOT_LIST))
+@waifu.on_message(filters.photo & filters.chat(CHATS) & filters.user(users=[792028928, 1232515770, 1964681186]))
 async def autoprotecc(_, message: Message):
     path = await waifu.download_media(message, file_name="waifu.jpg")
     print("Now working.")
