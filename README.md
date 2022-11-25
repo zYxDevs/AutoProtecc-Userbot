@@ -34,7 +34,6 @@ _More bots and features will be added soon..._
        API_HASH - Get these values from my.telegram.org
        STRING_SESSION - Get this from Replit
        CHATS - List id of chat you want use the userbot
-       BOT_LIST - List id of harem/husbando/servant bot
    Optional Vars:
        DELAY - Time delay in seconds so that it does not seep suspecious. Default = 5s. Type 0 if you dont want any delay at all.
 ```
