@@ -1,5 +1,6 @@
 import os
 import time
+import aiohttp
 import urllib
 import requests
 
@@ -21,14 +22,13 @@ useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) 
 opener.addheaders = [("User-agent", useragent)]
 
 
-def ParseSauce(googleurl):
+async def ParseSauce(googleurl):
     """Parse/Scrape the HTML code for the info we want."""
-
-    source = opener.open(googleurl).read()
+    async with aiohttp.ClientSession(headers=headers_) as session:
+      async with session.get(googleurl) as resp:
+          source = await resp.read()
     soup = BeautifulSoup(source, "html.parser")
-
     results = {"similar_images": "", "best_guess": ""}
-
     try:
         for similar_image in soup.findAll("input", {"class": "gLFyf"}):
             url = "https://www.google.com/search?tbm=isch&q=" + urllib.parse.quote_plus(
@@ -37,10 +37,8 @@ def ParseSauce(googleurl):
             results["similar_images"] = url
     except BaseException:
         pass
-
     for best_guess in soup.findAll("div", attrs={"class": "r5a77d"}):
         results["best_guess"] = best_guess.get_text()
-
     return results
 
 
@@ -51,22 +49,23 @@ def get_data(img):
     if os.path.exists(img):
         os.remove(img)
     if response.status_code == 400:
-        return
+        return print("(Waifu Catch Failed) - [Invalid Response]")
     return response.headers["Location"]
 
 
 @waifu.on_message(filters.photo & filters.chat(CHATS) & filters.user(users=BOT_LIST))
 async def autoprotecc(_, message: Message):
     path = await waifu.download_media(message, file_name="waifu.jpg")
-    print("Now working")
+    print("Now working.")
     time.sleep(1)
     fetchUrl = await get_data(img)
     match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
     guess = match["best_guess"]
     if not guess:
-        return await message.reply_text("Failed to protecc this waifu.")
+        return print("Failed to protecc this waifu.")
     guess = guess.replace("Results for", "")
     res = await message.reply_text(f"/protecc {guess}")
+    print(f"Success protecc {guess}")
     time.sleep(DELAY)
     await res.delete()
     await os.remove(path)
