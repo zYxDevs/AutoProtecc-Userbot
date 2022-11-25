@@ -55,11 +55,7 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@waifu.on_message(
-    filters.photo
-    & filters.chat(CHATS)
-    & filters.user(users=BOT_LIST)
-)
+@waifu.on_message(filters.photo & filters.chat(CHATS) & filters.user(users=BOT_LIST))
 async def autoprotecc(_, message: Message):
     path = await waifu.download_media(message, file_name="waifu.jpg")
     print("Now working")
