@@ -1,4 +1,4 @@
-pyrogram==1.*
+pyrogram==2.0.26
 requests
 bs4
-TgCrypto
+tgcrypto==1.2.3
