@@ -62,7 +62,7 @@ async def autoprotecc(_, message: Message):
     path = await waifu.download_media(message, file_name="waifu.jpg")
     print("Now working.")
     time.sleep(1)
-    fetchUrl = await get_data(img)
+    fetchUrl = await get_data(path)
     match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
     guess = match["best_guess"]
     if not guess:
