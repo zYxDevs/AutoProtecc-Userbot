@@ -25,8 +25,8 @@ headers_ = [("User-agent", u_)]
 async def ParseSauce(googleurl):
     """Parse/Scrape the HTML code for the info we want."""
     async with aiohttp.ClientSession(headers=headers_) as session:
-      async with session.get(googleurl) as resp:
-          source = await resp.read()
+        async with session.get(googleurl) as resp:
+            source = await resp.read()
     soup = BeautifulSoup(source, "html.parser")
     results = {"similar_images": "", "best_guess": ""}
     try:
