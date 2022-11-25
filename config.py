@@ -13,3 +13,4 @@ if CHATS := getenv("CHATS", None):
     CHATS = CHATS.split(" ")
 if BOT_LIST := getenv("BOT_LIST", None):
     BOT_LIST = BOT_LIST.split(" ")
+DELAY = int(getenv("DELAY", 5))
