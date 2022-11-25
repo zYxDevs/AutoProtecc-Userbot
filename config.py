@@ -6,7 +6,7 @@ if path.exists("config.env"):
     load_dotenv("config.env")
 
 
-API_ID = int(getenv("API_ID"))
+APP_ID = int(getenv("APP_ID"))
 API_HASH = getenv("API_HASH")
 STRING_SESSION= getenv("SESSION_NAME")
 if CHATS := getenv("CHATS", None):
