@@ -8,7 +8,7 @@ if path.exists("config.env"):
 
 APP_ID = int(getenv("APP_ID"))
 API_HASH = getenv("API_HASH")
-STRING_SESSION= getenv("SESSION_NAME")
+STRING_SESSION = getenv("SESSION_NAME")
 if CHATS := getenv("CHATS", None):
     CHATS = CHATS.split(" ")
 if BOT_LIST := getenv("BOT_LIST", None):
