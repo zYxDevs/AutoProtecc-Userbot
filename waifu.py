@@ -1,43 +1,16 @@
-import time
 import os
-import sys
+import time
 import urllib
 import requests
 
 from bs4 import BeautifulSoup
-from asyncio import get_event_loop
-from pyrogram import (
-    Client,
-    filters,
-    idle,
-)
-from pyrogram.handlers import MessageHandler
-
-
-HEROKU = bool(os.environ.get("HEROKU", False))
-try:
-    if HEROKU:
-        APP_ID = int(os.environ.get("APP_ID"))
-        API_HASH = str(os.environ.get("API_HASH"))
-        STRING_SESSION = str(os.environ.get("STRING_SESSION"))
-        DELAY = int(os.environ.get("DELAY"))
-        BOT_LIST = int(x for x in os.environ.get("BOT_LIST").split())
-    else:
-        from config import config
-
-        APP_ID = config.APP_ID
-        API_HASH = config.API_HASH
-        STRING_SESSION = config.STRING_SESSION
-        DELAY = config.DELAY
-        BOT_LIST = config.BOT_LIST
-except Exception as e:
-    print(e)
-    print("One or more variables missing or have error. Exiting !")
-    sys.exit(1)
-
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from config import API_HASH, APP_ID, CHATS, BOT_LIST, STRING_SESSION
 
 waifu = Client(
-    STRING_SESSION,
+    name="userbot",
+    session_string=STRING_SESSION,
     api_id=APP_ID,
     api_hash=API_HASH,
 )
@@ -82,24 +55,26 @@ def get_data(img):
     return response.headers["Location"]
 
 
-@waifu.add_handler(
-    MessageHandler(
-        filters.user(BOT_LIST), filters.group & ~filters.edited & ~filters.forwarded
-    )
+@waifu.on_message(
+    filters.photo
+    & filters.chat(CHATS)
+    & filters.user(users=BOT_LIST)
 )
-async def autoprotecc(_, message):
-    if message.photo:
-        if "add" in message.caption.lower():
-            img = await message.download()
-            fetchUrl = await get_data(img)
-            match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
-            guess = match["best_guess"]
-            if not guess:
-                return await message.reply_text("Failed to protecc this waifu.")
-            guess = guess.replace("Results for", "")
-            await time.sleep(DELAY)
-            kek = await message.reply_text(f"/protecc {guess}")
-            await kek.delete()
+async def autoprotecc(_, message: Message):
+    path = await waifu.download_media(message, file_name="waifu.jpg")
+    print("Now working")
+    time.sleep(1)
+    fetchUrl = await get_data(img)
+    match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
+    guess = match["best_guess"]
+    if not guess:
+        return await message.reply_text("Failed to protecc this waifu.")
+    guess = guess.replace("Results for", "")
+    res = await message.reply_text(f"/protecc {guess}")
+    time.sleep(DELAY)
+    await res.delete()
+    await os.remove(path)
 
 
-waifu.start()
+if __name__ == "__main__":
+    waifu.run()
