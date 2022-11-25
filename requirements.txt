@@ -2,3 +2,4 @@ pyrogram==2.0.26
 requests
 bs4
 tgcrypto==1.2.3
+python-dotenv
