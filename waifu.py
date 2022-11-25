@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import API_HASH, APP_ID, CHATS, BOT_LIST, STRING_SESSION
+from config import API_HASH, APP_ID, CHATS, BOT_LIST, STRING_SESSION, DELAY
 
 waifu = Client(
     name="userbot",
