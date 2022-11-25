@@ -1,9 +1,15 @@
-class config:
-    APP_ID = 0  # Get it from my.telegram.org
-    API_HASH = ""  # Get it from my.telegram.org
-    STRING_SESSION = ""  # Get it from t.me/GetStringRobot (Choose Pyrogram)
-    DELAY = 5  # Waif for x before send message
-    BOT_LIST = (
-        "792028928 1733263647"  # Harem, Servant or Husbando bot ids separated by space
-    )
-    DATABASE_URL = ""  # For later, leave it empty now
+from os import getenv, path
+
+from dotenv import load_dotenv
+
+if path.exists("config.env"):
+    load_dotenv("config.env")
+
+
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
+STRING_SESSION= getenv("SESSION_NAME")
+if CHATS := getenv("CHATS", None):
+    CHATS = CHATS.split(" ")
+if BOT_LIST := getenv("BOT_LIST", None):
+    BOT_LIST = BOT_LIST.split(" ")
